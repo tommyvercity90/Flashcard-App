@@ -1,0 +1,54 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flashcard App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main class="app">
+        <h1>📚 Flashcard App</h1>
+        <p class="subtitle">Learn something new, one card at a time!</p>
+
+        <div class="progress-section">
+            <span id="progressText">Card 1 of 10</span>
+            <div class="progress-track">
+                <div id="progressBar" class="progress-bar"></div>
+            </div>
+        </div>
+
+        <div class="card-container">
+            <div class="flashcard" id="flashcard" tabindex="0"
+                 role="button" aria-label="Flashcard. Click to reveal answer"
+                 aria-pressed="false">
+                <div class="card-face card-front">
+                    <span class="card-label">QUESTION</span>
+                    <h2 id="question">Loading question...</h2>
+                    <p class="hint">Click the card to reveal the answer ↻</p>
+                </div>
+
+                <div class="card-face card-back">
+                    <span class="card-label">ANSWER</span>
+                    <h2 id="answer">Loading answer...</h2>
+                    <p class="hint">Click to return to question ↻</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="controls">
+            <button id="prevBtn" type="button">← Previous</button>
+            <button id="flipBtn" type="button">Flip Card ↻</button>
+            <button id="nextBtn" type="button">Next →</button>
+        </div>
+
+        <p class="keyboard-hint">
+            Tip: Use ← and → arrow keys to navigate.
+        </p>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
